@@ -1,0 +1,38 @@
+<div class="header">
+    <h1>Datos de la Compra</h1>
+    <p>Ingrese los datos de la Campra</p>
+    </div>
+    <label>Nombre Cliente:</label>
+    <input type="text" [(ngModel)]="nombre">
+    <label>DUI:</label>
+    <input type="text" [(ngModel)]="DUI">
+    <label>Codigo Producto:</label>
+    <input type="text" [(ngModel)]="codigo">
+    <label>Compra:</label>
+    <input type="text" [(ngModel)]="Compra">
+    <label>Precio:</label>
+    <input type="text" [(ngModel)]="precio">
+    <button class="button" (click)="ingresar()">Ingresar</button>
+    <br/><br/>
+    <table [hidden]="contador == 0">
+    <thead>
+    <tr>
+    <th>Nombre</th>
+    <th>DUI</th>
+    <th>Codigo Producto</th>
+    <th>compra</th>
+    <th>precio</th>
+    
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tcliente of registro">
+        <td>{{tcliente.nombre}}</td>
+        <td>{{tcliente.DUI}}</td>
+        <td>{{tcliente.codigo}}</td>
+        <td>{{tcliente.compra}}</td>
+        <td>{{tcliente.precio}}</td>
+        <td>{{tcliente.mayor}}</td>
+        </tr>
+        </tbody>
+        </table>
